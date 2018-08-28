@@ -15,14 +15,13 @@
 		Name of the log file to send the data to.
 	
 	.PARAMETER UseMutex
-		A description of the UseMutex parameter.
+		Optional - set to $true to avoid log resource contention.
 	
 	.EXAMPLE
 		write-log -text "This is the main problem." -level ERROR -log c:\test.log
 	
 	.NOTES
 		Created by Donnie Taylor.
-		Version 1.0     Date 4/5/2016
 #>
 function Write-Log
 {
