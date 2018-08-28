@@ -1,0 +1,1 @@
+﻿get-childitem "$PSScriptRoot\Public_Functions\*.ps1" -Recurse | resolve-path | ForEach-Object{ . $_.providerpath }
