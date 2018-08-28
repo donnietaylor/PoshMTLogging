@@ -19,7 +19,7 @@
 	Copyright = '(c) 2016. All rights reserved.'
 	
 	# Description of the functionality provided by this module
-	Description = 'Module description'
+	Description = 'Log writer for PowerShell with automatic log rolling, standard formatting, and mutex use'
 	
 	# Minimum version of the Windows PowerShell engine required by this module
 	PowerShellVersion = '2.0'
