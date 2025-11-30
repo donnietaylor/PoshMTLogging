@@ -68,15 +68,15 @@ Each log entry is formatted as:
 Example output:
 
 ```
-11/30/2025 3:30:00 PM---INFO---Application started
-11/30/2025 3:30:01 PM---WARN---Configuration value missing
-11/30/2025 3:30:02 PM---ERROR---Failed to connect
+<date> <time>---INFO---Application started
+<date> <time>---WARN---Configuration value missing
+<date> <time>---ERROR---Failed to connect
 ```
 
 ## Log Rolling
 
 When a log file exceeds 5MB, the module automatically:
-1. Creates an archive copy with timestamp (e.g., `app.log.11-30-25 03.30.00.archive`)
+1. Creates an archive copy with timestamp (e.g., `app.log.MM-DD-YY HH.MM.SS.archive`)
 2. Clears the original log file for continued logging
 
 ## Requirements
