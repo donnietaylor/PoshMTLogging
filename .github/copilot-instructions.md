@@ -6,6 +6,7 @@ This is a Powershell module for logging
 ## Coding Conventions
 - Use pwsh 7+
 - Follow standard style guidelines
+- Never use emojis in code or documentation
 
 ### Naming Conventions
 - Follow noun-verb naming standards when appropriate
