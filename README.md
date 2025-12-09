@@ -84,9 +84,11 @@ $jobs | Wait-Job | Remove-Job
 ### Automatic Log Rolling
 
 When a log file reaches 5MB, the module automatically:
-1. Creates an archive copy with timestamp: `app.log.MM-dd-yy hh.mm.ss.archive` (12-hour format)
+1. Creates an archive copy with timestamp in 12-hour format: `app.log.MM-dd-yy hh.mm.ss.archive`
 2. Removes the original file
 3. Starts a new log file
+
+Note: The archive filename uses 12-hour time format (hh) without AM/PM indicator.
 
 Example of log files after rolling:
 ```
