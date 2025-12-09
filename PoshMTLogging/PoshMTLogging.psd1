@@ -22,7 +22,7 @@
 	Description = 'Log writer for PowerShell with automatic log rolling, standard formatting, and mutex use'
 	
 	# Minimum version of the Windows PowerShell engine required by this module
-	PowerShellVersion = '2.0'
+	PowerShellVersion = '7.0'
 	
 	# Name of the Windows PowerShell host required by this module
 	PowerShellHostName = ''
@@ -31,10 +31,10 @@
 	PowerShellHostVersion = ''
 	
 	# Minimum version of the .NET Framework required by this module
-	DotNetFrameworkVersion = '2.0'
+	# DotNetFrameworkVersion = '2.0'
 	
 	# Minimum version of the common language runtime (CLR) required by this module
-	CLRVersion = '2.0.50727'
+	# CLRVersion = '2.0.50727'
 	
 	# Processor architecture (None, X86, Amd64, IA64) required by this module
 	ProcessorArchitecture = 'None'
