@@ -6,7 +6,7 @@ A PowerShell 7.x logging module that provides thread-safe logging capabilities w
 
 - **Thread-Safe Logging**: Optional mutex-based locking prevents resource contention when multiple threads write simultaneously
 - **CMTrace Compatible**: Severity levels (INFO, WARN, ERROR, DEBUG) enable automatic color-coding in CMTrace and similar log readers
-- **Automatic Timestamping**: Each log entry includes a timestamp in the format `MM/dd/yyyy HH:mm:ss`
+- **Automatic Timestamping**: Each log entry includes a timestamp using the default .NET DateTime format
 - **Automatic Log Rolling**: Logs are automatically rolled over when they reach 5MB, creating timestamped archive files
 - **PowerShell 7.x Compatible**: Fully compatible with PowerShell 7.0 and later versions
 
@@ -84,23 +84,25 @@ $jobs | Wait-Job | Remove-Job
 ### Automatic Log Rolling
 
 When a log file reaches 5MB, the module automatically:
-1. Creates an archive copy with timestamp: `app.log.MM-dd-yy hh.mm.ss.archive`
+1. Creates an archive copy with timestamp: `app.log.MM-dd-yy hh.mm.ss.archive` (12-hour format)
 2. Removes the original file
 3. Starts a new log file
 
 Example of log files after rolling:
 ```
 app.log
-app.log.12-09-25 02.30.15.archive
-app.log.12-08-25 14.22.10.archive
+app.log.12-09-25 09.30.15.archive
+app.log.12-08-25 02.22.10.archive
 ```
 
 ### Log Entry Format
 
 Each log entry follows this format:
 ```
-MM/dd/yyyy HH:mm:ss---LEVEL---message text
+[DateTime]---LEVEL---message text
 ```
+
+The timestamp uses the default .NET DateTime string format (typically `MM/dd/yyyy HH:mm:ss` in most locales).
 
 Example:
 ```
